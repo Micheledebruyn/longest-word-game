@@ -1,0 +1,11 @@
+<h1>
+<%= @grid.join(" ") %>
+</h1>
+
+<form action="/score">
+  <label for="question">Take a shot</label>
+  <input type="hidden" name="grid" value="<%= @grid.join("")%>">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <input type="text" id="question" name="attempt" placeholder="Your attempt here">
+  <input type="submit" value="Go on!">
+</form>
